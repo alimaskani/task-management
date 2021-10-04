@@ -45,7 +45,7 @@ class LabelController extends Controller
             "workspace_id" => $workspace_id
         ]);
 
-        return response()->json(['message' => "Label SuccessFully Inserted"], Response::HTTP_CREATED);
+        return response()->json(['message' => "label successfully inserted"], Response::HTTP_CREATED);
 
     }
 

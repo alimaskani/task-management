@@ -51,7 +51,7 @@ class TicketController extends Controller
             "label_id" => $label_id
         ]);
 
-        return response()->json(['message' => "label successfully inserted"], Response::HTTP_CREATED);
+        return response()->json(['message' => "ticket successfully inserted"], Response::HTTP_CREATED);
 
 
     }
