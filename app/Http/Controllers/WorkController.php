@@ -15,7 +15,7 @@ class WorkController extends Controller
             ->where('name', 'LIKE', '%' . $name . '%')->get();
         /*** check response ***/
         if ($work->isEmpty()) {
-            return response()->json(["message" => "Not Found Item"], Response::HTTP_NOT_FOUND);
+            return response()->json(["message" => "not found item"], Response::HTTP_NOT_FOUND);
         }
         return response()->json(['count' => $work->count(),'rows' => $work] , Response::HTTP_OK);
     }

@@ -15,7 +15,7 @@ class TicketController extends Controller
         $ticket = Ticket::query()->where('title', 'LIKE', '%' . $name . '%')->get();
         /*** check response ***/
         if ($ticket->isEmpty()) {
-            return response()->json(["message" => "Not Found Item"], Response::HTTP_NOT_FOUND);
+            return response()->json(["message" => "not found item"], Response::HTTP_NOT_FOUND);
         }
         return response()->json(['count' => $ticket->count() ,'rows' => $ticket], Response::HTTP_OK);
     }
