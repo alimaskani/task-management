@@ -27,8 +27,8 @@ class WorkController extends Controller
         ]);
 
         Workspace::query()->create([
-            'name' => $request->name,
-            'background_color' => $request->background_color ? $request->background_color : "#fff"
+            'name' => $request->input('name'),
+            'background_color' => $request->input('background_color') ? $request->input('background_color') : "#fff"
         ]);
 
         return response()->json(["message" => "successfully inserted"], Response::HTTP_CREATED);
